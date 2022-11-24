@@ -50,8 +50,10 @@ SELECT * FROM clients;
 -- INSERT INTO clients(email,first_name)
 -- VALUES ('zizou@yahoo.fr','Ronaldo De Lima');
 
+-- Ajouter contrainte d'unicite
 -- ALTER TABLE clients ADD UNIQUE(email);
 
+-- Ajouter une containte de NOT NULL
 ALTER TABLE clients ALTER COLUMN first_name SET NOT NULL;
 
 
