@@ -56,5 +56,18 @@ SELECT * FROM clients;
 -- Ajouter une containte de NOT NULL
 ALTER TABLE clients ALTER COLUMN first_name SET NOT NULL;
 
+-- Supprimer une table
+DROP TABLE clients;
+
+-- Création de la table clients en appliquant les contraintes
+CREATE TABLE IF NOT EXISTS clients(
+  id SERIAL PRIMARY KEY, -- NOT NULL et UNIQUE
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  phone_number VARCHAR(10) UNIQUE
+);
+
+
 
 
