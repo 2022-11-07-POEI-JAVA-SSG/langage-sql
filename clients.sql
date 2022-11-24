@@ -33,3 +33,10 @@ VALUES
 
 -- Limiter les colonnes à afficher
 SELECT id,first_name, last_name FROM clients;
+
+
+-- full_name            |   email
+-- ----------------------------------------------------
+-- lisangola christian  |  christian.lisangola@gmail.com
+ 
+SELECT CONCAT(last_name,' ',first_name) AS full_name, email FROM clients;
